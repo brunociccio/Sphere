@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs } from "@radix-ui/react-tabs";
 import Image from "next/image";
 
 export default function Home() {
@@ -17,8 +19,16 @@ export default function Home() {
       <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="37.5" cy="37.5" r="37.5" fill="#E11D48"/>
       </svg>
-      
-      <h1>Sphere</h1>
+
+      <h1 className="text-4xl font-extrabold uppercase">Sphere</h1>
+
+      <Tabs defaultValue="entrar">
+        <TabsList>
+          <TabsTrigger value="entrar">entrar</TabsTrigger>
+          <TabsTrigger value="registrar">registrar</TabsTrigger>
+        </TabsList>
+      </Tabs>
+
       <Button>Entrar</Button>
       </section>
 
