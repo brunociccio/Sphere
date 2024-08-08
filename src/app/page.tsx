@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tabs } from "@radix-ui/react-tabs";
-import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
@@ -27,9 +26,46 @@ export default function Home() {
           <TabsTrigger value="entrar">entrar</TabsTrigger>
           <TabsTrigger value="registrar">registrar</TabsTrigger>
         </TabsList>
+
+      <TabsContent value="entrar">
+        <form>
+          <div>
+            <label htmlFor="email">email</label>
+            <Input id="email" placeholder="email@servidor.com"/>
+          </div>
+          <div>
+            <label htmlFor="senha">senha</label>
+            <Input id="senha" type="password"/>
+          </div>
+
+          <Button>Entrar</Button>
+        </form>
+      </TabsContent>
+
+      <TabsContent value="registrar">
+      <form>
+          <div>
+            <label htmlFor="nome">nome</label>
+            <Input id="nome"/>
+          </div>
+          <div>
+            <label htmlFor="bio">bio</label>
+            <Input id="bio"/>
+          </div>
+          <div>
+            <label htmlFor="email">email</label>
+            <Input id="email" placeholder="email@servidor.com"/>
+          </div>
+          <div>
+            <label htmlFor="senha">senha</label>
+            <Input id="senha" type="password"/>
+          </div>
+
+          <Button>Criar Conta</Button>
+        </form>
+      </TabsContent>
       </Tabs>
 
-      <Button>Entrar</Button>
       </section>
 
     </main>
