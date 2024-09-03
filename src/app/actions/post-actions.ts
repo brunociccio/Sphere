@@ -22,7 +22,7 @@ export async function createPost(formData: FormData){
     }
 
     return await response.json()
-
+ 
 }
 
 export async function getPosts(page: number = 1){
